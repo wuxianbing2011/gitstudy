@@ -1,0 +1,48 @@
+------------------------------------
+
+https://github.com/thomas-pan/chinaportal
+
+
+
+https://github.com/intel-web-engineering-development/FirstTimeBuyer
+
+cd D:
+cd Simplecore/FirstTimeBuyer/
+git pull + URL 
+
+git init
+git add .
+git commit -m "v2.1"
+git fetch + URL
+git push + URL
+git tag -a v2.1 -m "v2.1"
+git push origin v2.1
+
+------------------------------------
+
+2016-05-20
+
+https://github.com/wuxianbing2011/gitstudy
+
+$ git add reademe.txt
+#把readme.txt添加到暂存区里面
+
+$ git commti -m "v1.0"
+#提交readme.txt 并添加注释为“v1.0”
+
+$ git status
+#查看状态（是否还有文件没有提交）
+On branch master
+nothing to commit, working directory clean
+
+如果更改了readme.txt文件
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
