@@ -65,3 +65,37 @@ $ git push origin :YourBranchName
 
 最后将本地的新分支名push到远程：
 $ git push origin
+
+
+
+查看分支
+git branch
+或者
+git branch -v
+ 
+A) 创建分支
+git branch mystudygit1.0
+ 
+B) 切换分支
+git checkout mystudygit1.0
+ 
+C) 删除分支
+git branch -d mystudygit1.0  //如果该分支没有合并到主分支会报错
+或者
+git branch -D mystudygit1.0   //强制删除
+ 
+D) 分支合并
+比如，如果要将开发中的分支（develop），合并到稳定分支（master），
+          首先切换的master分支：git checkout master。
+然后执行合并操作：git merge develop。
+如果有冲突，会提示你，调用git status查看冲突文件。
+解决冲突，然后调用git add或git rm将解决后的文件暂存。
+所有冲突解决后，git commit 提交更改。
+例如：将acc2f69提交合并到当前分支
+git merge acc2f69
+ 
+E）合并
+ 
+ 
+git如何clone 远程github中的分支？
+git clone -b release_branch https://github.com/jetty/
