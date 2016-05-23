@@ -1,3 +1,6 @@
+infinite Unlimited eternity MUGEN
+arms ; soldiers ; force ; weapons ; military ; pawn
+Infinite Pawn
 ------------------------------------
 
 https://github.com/thomas-pan/chinaportal
@@ -46,3 +49,19 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
+
+
+------------------------------------
+
+2016-05-23
+
+https://github.com/wuxianbing2011/gitstudy
+
+Git命令可以很方便地重命名本地分支
+$ git branch -m <old_branch_name> <new_branch_name>
+
+删除远程待修改的分支名（注意：git branch -d YourBranchName只能删除本地的branch）
+$ git push origin :YourBranchName
+
+最后将本地的新分支名push到远程：
+$ git push origin
