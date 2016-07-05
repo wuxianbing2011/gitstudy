@@ -23,6 +23,29 @@ git push origin v2.1
 
 ------------------------------------
 
+------------------------------------
+
+Adding an existing project to GitHub using the command line
+
+$ git init
+
+$ git add .
+# Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
+
+$ git commit -m "First commit"
+# Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+
+$ git remote add origin remote repository URL
+# Sets the new remote
+$ git remote -v
+# Verifies the new remote URL
+
+$ git push origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+
+------------------------------------
+
+
 2016-05-20
 
 https://github.com/wuxianbing2011/gitstudy
@@ -99,3 +122,36 @@ E）合并
  
 git如何clone 远程github中的分支？
 git clone -b release_branch https://github.com/jetty/
+
+
+
+
+------------------------------------
+
+
+http://mobile.51cto.com/hot-481240.htm
+
+http://blog.jobbole.com/87700/
+
+
+
+
+
+------------------------------------
+Git怎样撤销一次分支的合并Merge
+
+如果确定放弃这次合并的提交，假如是 merge 了错误的分支到 master，先通过git reflog或者 gitg、gitk、qgit 等工具确定你 merge 之前 master 所在的 commit，然后在 master 分支上使用
+git reset --hard <commit
+重置头指针。一般来说，在 master 上直接执行
+git reset --hard HEAD~
+也可以回到合并之前的提交，但
+git reset --hard
+命令还是使用确定的 commit 为好。注意，
+git reset --hard
+命令有风险，除非十分确定要放弃当前提交，否则最好先git branch为当前的提交建立个新的分支引用后再继续，待确定无误后删除即可。
+如果错误的合并之后又有了新的提交，可以在完成前述正确的合并之后，通过
+git rebase --onto <错误的合并提交 <正确的合并提交 <新提交所在分支
+来在正确的合并提交上重建新的提交。
+git rebase --onto
+命令所重建的提交序列最好是线性的，否则非线性的提交会变成线性的。若需要保存非线性的提交历史，可以考虑使用
+参数，不过结果很不可靠，具体视提交的非线性程度而定。
